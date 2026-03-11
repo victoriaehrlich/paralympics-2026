@@ -2,7 +2,7 @@
 
 const parseDate = d3.timeParse("%d/%m/%Y");
 
-d3.csv("../data/Urea_prices2.csv", d => ({
+d3.csv("data/Urea_prices2.csv", d => ({
     Date: parseDate(d.Date),
     Urea: +d.Urea
 })).then(data => {
