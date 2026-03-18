@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Weekly Chart #2 Fertiliser Prices</title>
+	<title>Weekly Chart #3 Paralympic Parity</title>
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 
@@ -14,28 +14,23 @@
 
 		<p class="about-label">About this week</p>
 
-
 		<p class="paragraph-blog">
-			One thing that started to click is that D3 builds visualisations piece by piece. Rather than thinking I want a line chart, you're working directly with SVG: Scalable Vector Graphics. Unlike a pixel-based image (where you're essentially colouring in a grid), SVG describes shapes mathematically: a line is just two points with a path between them, a circle is a centre point and a radius. Scale it up or scale it down - it's really up to you to set the dimensions and style.
+			This week I'm learning pie charts in D3.js. Pie charts get a bad reputation in data visualisation circles - you'll find plenty of strongly-worded Medium posts about how humans are terrible at reading angles - but I think there's a time and a place for them, and that time is when you have a simple part-to-whole story with a small number of categories. This week's topic gave me exactly that.
 		</p>
 
 		<p class="paragraph-blog">
-			D3 leans into this fully. I’m not telling it "make me a line chart" and getting something back, unlike traditional tools like Power BI or Tableau, or even coding languages like Python. You're constructing every part of the chart yourself: here’s a path driven by values, here are some circles placed at coordinates. A traditional charting library would give me a working line chart but with fewer design choices. D3 gives you the raw materials to build whatever you're imagining.
+			A note on the third chart: I almost put disabled girls and boys into a single pie chart. Those two percentages don't add up to 100% - they're two separate statistics measuring the same thing in two different groups. Putting them in one pie would imply they're slices of a whole, which is misleading. Two donuts, one per group, is the honest version. Sometimes the right chart is the one that doesn't lie.
 		</p>
 
 		<p class="paragraph-blog">
-			So if you’re curious about what I learnt this week while building my line chart, scroll down and read about fertiliser prices and the geopolitical tensions around Iran.
-		</p>
-
-		<p class="paragraph-blog">
-			Here’s my random Friday afternoon thoughts on data and whatever chart I’m currently trying to build.
+			Here's my random Friday afternoon thoughts on data and whatever chart I'm currently trying to build.
 		</p>
 
 		<p class="paragraph-blog">Have a nice weekend!</p>
 
 		<div class="source-note">
 			GitHub Account:
-			<a href="https://github.com/victoriaehrlich/fertilizer-prices-chart">
+			<a href="https://github.com/victoriaehrlich">
 				github.com/victoriaehrlich
 			</a>
 		</div>
@@ -48,39 +43,81 @@
 
 	<div class="responsive-svg-container">
 
-		<h2 class="section-title">The Cost of Fertiliser</h2>
+		<h2 class="section-title">Not Equal Yet: Women at the Winter Paralympics</h2>
 
 		<h3 class="subtitle">
-			Global fertiliser prices are rising again. Here's why it matters.
+			The Milano Cortina 2026 Paralympics just wrapped up. The headline was progress. The detail tells a more complicated story.
 		</h3>
 
 		<p class="paragraph">
-			Global fertiliser prices have begun rising again as conflict involving Iran threatens production and exports from the Middle East. It echoes what happened after Russia's invasion of Ukraine in 2022, when fertiliser and energy markets were thrown into turmoil. But this time the risk is different: the Middle East sits at the heart of global fertiliser supply.
+			The Milano Cortina 2026 Paralympic Winter Games closed this week — and the official narrative has been upbeat. It was billed as the most gender-balanced edition in Winter Games history, with a record number of female athletes and new women's events. A total of 160 women competed across six sports, an 18% increase over the previous record of 136 women at Beijing 2022.
 		</p>
 
 		<p class="paragraph">
-			The region is both a major producer and a crucial transit hub. Around 35% of globally traded urea passes through the Strait of Hormuz, one of the world’s most important shipping routes. Urea is the most widely used nitrogen fertiliser and is what keeps a huge share of the world's crops growing. Any disruption to production in the Gulf - or to shipping through the strait - can quickly tighten supply for farmers around the world.
+			That's real progress. And it also isn't the full picture.
+		</p>
+
+		<p class="paragraph">
+			611 athletes from 55 nations competed at Milano Cortina 2026. Of those, 160 were women. That still means nearly three quarters of the field were men — and compared to the Summer Games, the gap is stark. At Paris 2024, women made up 44.7% of athletes. At Milano Cortina, 26.2%. The IPC has always indicated a desire for gender parity. The direction of travel in winter sport is slower.
 		</p>
 
 		<p class="chart-title">
-			Monthly global urea fertiliser prices ($/mt)
+			Athletes at Milano Cortina 2026, by gender
 		</p>
 
-		<div id="line-chart"></div>
+		<div id="chart-participants"></div>
 
 		<div class="source-note">
-			Data source:
-			<a href="https://www.worldbank.org/en/research/commodity-markets">
-				www.worldbank.org
-			</a>
+			Data source: International Paralympic Committee, Milano Cortina 2026
+		</div>
+
+
+		<p class="paragraph">
+			The gap is partly structural — and nowhere is that clearer than in para ice hockey. The sport is officially mixed-gender: there are no separate men's and women's events. In practice, Japan's Akari Fukunishi was the only woman among 135 players at these Games — the fourth woman to compete in the sport's entire Paralympic history.
+		</p>
+
+		<p class="paragraph">
+			This isn't because there are no women playing para ice hockey. Selection is country-led and quota-based — each nation picks its squad from a small fixed allocation, and there is no dedicated women's pathway at Paralympic level. For a standalone women's event to exist, the sport needs to demonstrate representation from at least eight national teams across three regions, plus multiple World Championships. Women's para ice hockey hasn't reached those benchmarks yet. A separate tournament is likely still several Games away — possibly 2030 or 2034.
+		</p>
+
+		<p class="paragraph">
+			Para snowboard tells a similar story. Men competed in six medal events at Milano Cortina. Women competed in two.
+		</p>
+
+
+		<p class="paragraph">
+			The broader numbers on aspiration make for uncomfortable reading. A 2025 report by Women in Sport and Activity Alliance surveyed young disabled people following the Paris 2024 Paralympics. The Games inspired 74% of them to do more sport — but who gets to dream of reaching the top is far from equal.
+		</p>
+
+		<p class="paragraph">
+			A lack of visibility is known to affect participation at all levels of sport, but it's especially important at the Paralympics, which may be the only global media moment a para athlete gets in four years. If disabled girls don't see people like them competing, the dream gap widens before it even has a chance to close.
+		</p>
+
+		<p class="chart-title">
+			Who dreams of reaching the top in sport? Disabled girls vs disabled boys
+		</p>
+
+		<div class="chart-pair">
+			<div class="chart-pair-block">
+				<p class="chart-pair-label">Disabled girls</p>
+				<div id="chart-girls"></div>
+			</div>
+			<div class="chart-pair-block">
+				<p class="chart-pair-label">Disabled boys</p>
+				<div id="chart-boys"></div>
+			</div>
+		</div>
+
+		<div class="source-note">
+			Data source: Women in Sport / Activity Alliance, April 2025
 		</div>
 
 		<p class="paragraph">
-			The timing feels familiar. Russia's invasion of Ukraine began in February 2022, just as farmers across the northern hemisphere were preparing for the planting season. The same is happening now. As farmers start buying fertiliser for the coming season, rising prices and potential shortages could start affecting what they actually decide to plant.
+			Stephanie Hilborne OBE, CEO of Women in Sport, said: "This report reveals the extent to which disabled girls are being left behind in sport. While nearly two-thirds of disabled boys dream of reaching the top, only a third of disabled girls feel the same. That's not down to lack of ambition — it's the weight of gender stereotypes and the added barriers of disability, crushing opportunity and depriving young disabled women of joy. Sport has the power to transform lives, to bring self-belief and belonging. We must challenge the stereotypes and work to create more opportunities to create a future where every girl feels sport is a place she belongs."
 		</p>
 
 		<p class="paragraph">
-			But the impact might play out differently this time. Ukraine's invasion immediately disrupted grain exports, sending food prices sharply higher. Fertiliser shocks work more slowly: they raise the cost of growing crops rather than removing food from markets overnight. But if farmers can't afford fertiliser or can't access it, yields could fall across multiple regions later in the year.
+			The record this week was real. So is the distance still to go.
 		</p>
 
 		<div class="source-note">
@@ -94,7 +131,7 @@
 
 
 	<script src="https://d3js.org/d3.v7.min.js"></script>
-	<script src="js/line-chart.js"></script>
+	<script src="js/pie-charts.js"></script>
 
 </body>
 </html>

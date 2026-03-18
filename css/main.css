@@ -2,14 +2,14 @@
   margin-left: auto;
   margin-right: auto;
   width: 100%;
-  max-width: 900px;
+  max-width: 780px;
   text-align: left;
 }
 
 /* Intro / About section */
 .about-week {
   width: 100%;
-  max-width: 900px;
+  max-width: 780px;
   margin: 60px auto 30px auto;
   padding: 0;
   text-align: left;
@@ -31,14 +31,14 @@
   font-size: 14px;
   line-height: 1.75;
   color: #4a4a4a;
-  max-width: 900px;
+  max-width: 780px;
   margin: 0 0 16px 0;
 }
 
 /* divider between intro and article */
 .article-start{
   width: 100%;
-  max-width: 900px;
+  max-width: 780px;
   margin: 0 auto 36px auto;
   border: none;
   border-top: 1px solid #ececec;
@@ -47,28 +47,28 @@
 /* Main article */
 .section-title{
   font-family: 'Libre Baskerville', serif;
-  font-size: 44px;
+  font-size: 40px;
   line-height: 1.1;
   font-weight: 400;
   letter-spacing: -1px;
   margin: 60px auto 10px auto;
-  max-width: 900px;
+  max-width: 780px;
   text-align: left;
 }
 
 .subtitle{
   font-family: 'Libre Baskerville', serif;
-  font-size: 20px;
+  font-size: 18px;
   font-style: italic;     
   font-weight: 400;       
-  max-width: 900px;
+  max-width: 780px;
   margin: 20px auto;
   text-align: left;
 }
 
 .paragraph{
   max-width: 900px;
-  margin: 30px auto;
+  margin: 18px auto;
   font-family: Georgia, serif;
   font-size: 14px;
   line-height: 1.6;
@@ -82,13 +82,13 @@
   font-weight: 500;
   letter-spacing: 0.01em;
   color: #555;
-  max-width: 900px;
+  max-width: 780px;
   margin: 42px auto 18px auto;
   text-align: left;
 }
 
 .source-note{
-  max-width: 900px;
+  max-width: 780px;
   margin: 10px auto 40px auto;
   font-family: Georgia, serif;
   font-size: 12px;
@@ -100,54 +100,34 @@
   color: #444;
 }
 
-/* Chart / axis styles */
-.axis-x path,
-.axis-y path {
-  stroke: #666;
+/* Side-by-side donut chart layout */
+.chart-pair {
+    display: flex;
+    gap: 200px;
+    max-width: 780px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: center; 
 }
 
-.axis-x line,
-.axis-y line {
-  stroke: #666;
+.chart-pair-block {
+    flex: 1;
+    min-width: 200px;
+    max-width: 280px;
 }
 
-.axis-x,
-.axis-y{
-  font-family: 'Inter', sans-serif;
-  font-size: 11px;
-  color: #666;
+.chart-pair-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    color: #777;
+    text-transform: uppercase;
+    margin: 0 0 8px 0;
+    text-align: center;
 }
 
-.chart-label{
-  font-family: 'Inter', sans-serif;
-  font-size: 12px;
-  fill: #444;
-}
-
-.data-note{
-  font-family: 'Inter', sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.grid line {
-  stroke: #e8e8e8;
-  stroke-width: 0.7;
-}
-
-.grid path {
-  display: none;
-}
-
-.event-label{
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 11px;
-  fill: #666;
-}
-
-.event-line{
-  stroke: #777;
-  stroke-width: 1;
-  stroke-dasharray: 4 4;
+#chart-participants {
+    max-width: 280px;
+    margin-left: 0;
 }
