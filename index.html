@@ -15,22 +15,26 @@
 		<p class="about-label">About this week</p>
 
 		<p class="paragraph-blog">
-			This week I'm learning pie charts in D3.js. Pie charts get a bad reputation in data visualisation circles - you'll find plenty of strongly-worded Medium posts about how humans are terrible at reading angles - but I think there's a time and a place for them, and that time is when you have a simple part-to-whole story with a small number of categories. This week's topic gave me exactly that.
+			This week I learnt all about donut charts. And I'll be honest, in my day-to-day work I'm not a fan and I never use them. There's a lot of controversy around them in the community, people trying to fill it too much and it becomes impossible to read: pie charts with eight slices and labels so small you need to squint. And I've always thought a bar chart almost always does the job better. But this week I'm learning them in D3.js, so I had to find a use case I could actually defend.
 		</p>
 
 		<p class="paragraph-blog">
-			A note on the third chart: I almost put disabled girls and boys into a single pie chart. Those two percentages don't add up to 100% - they're two separate statistics measuring the same thing in two different groups. Putting them in one pie would imply they're slices of a whole, which is misleading. Two donuts, one per group, is the honest version. Sometimes the right chart is the one that doesn't lie.
+			That meant looking for topics where a single data point tells the whole story - one number as a share of a whole, nothing more. The Paralympics closing last weekend gave me exactly that, three times over.
 		</p>
 
 		<p class="paragraph-blog">
-			Here's my random Friday afternoon thoughts on data and whatever chart I'm currently trying to build.
+			That said, arcs and donuts have a lot of potential and some of the most beautiful custom visuals in the industry are built on exactly this foundation. One of my favourites is Nadieh Bremer's <a href="https://olympicfeathers.visualcinnamon.com/">Olympic Feathers</a>, which also explores Olympics data. It uses arcs and radians driven by medal counts, stacked and layered across time. This week I could start to understand parts - even if small parts - of her code and the different elements to it. So maybe donut charts aren't that bad after all.
+		</p>
+
+		<p class ="paragraph-blog">
+			Anyway, here’s my random Friday afternoon thoughts on data and whatever chart I’m currently trying to build.
 		</p>
 
 		<p class="paragraph-blog">Have a nice weekend!</p>
 
 		<div class="source-note">
 			GitHub Account:
-			<a href="https://github.com/victoriaehrlich">
+			<a href="https://victoriaehrlich.github.io/paralympics-2026/">
 				github.com/victoriaehrlich
 			</a>
 		</div>
@@ -50,15 +54,15 @@
 		</h3>
 
 		<p class="paragraph">
-			The Milano Cortina 2026 Paralympic Winter Games closed this week — and the official narrative has been upbeat. It was billed as the most gender-balanced edition in Winter Games history, with a record number of female athletes and new women's events. A total of 160 women competed across six sports, an 18% increase over the previous record of 136 women at Beijing 2022.
+			The Milano Cortina 2026 Paralympic Winter Games closed this week and the official narrative has been upbeat. It was shared to be the most gender-balanced edition in Winter Games history, with a record number of female athletes and new women's events. A total of 160 women competed across six sports, compared to the previous record of 136 women at Beijing 2022.
 		</p>
 
 		<p class="paragraph">
-			That's real progress. And it also isn't the full picture.
+			That is progress but there's also layers to that.
 		</p>
 
 		<p class="paragraph">
-			611 athletes from 55 nations competed at Milano Cortina 2026. Of those, 160 were women. That still means nearly three quarters of the field were men — and compared to the Summer Games, the gap is stark. At Paris 2024, women made up 44.7% of athletes. At Milano Cortina, 26.2%. The IPC has always indicated a desire for gender parity. The direction of travel in winter sport is slower.
+			611 athletes from 55 nations competed at Milano Cortina 2026. Of those, 160 were women. That still means nearly three quarters of the field were men and compared to the Summer Games, the difference is quite big. At the Paris 2024 edition, women made up 44.7% of athletes. At Milano Cortina, only 26.2%. The IPC has always indicated they were striving for gender parity, and there's an effort, but why is it so much slower when it comes to the Winter Paralympics?
 		</p>
 
 		<p class="chart-title">
@@ -73,20 +77,15 @@
 
 
 		<p class="paragraph">
-			The gap is partly structural — and nowhere is that clearer than in para ice hockey. The sport is officially mixed-gender: there are no separate men's and women's events. In practice, Japan's Akari Fukunishi was the only woman among 135 players at these Games — the fourth woman to compete in the sport's entire Paralympic history.
+			The gap is partly structural and a good example to explore what that means is para ice hockey. The sport is officially mixed-gender: there are no separate men's and women's events. This year Japan's Akari Fukunishi was the only woman among the 135 players at these Games - the fourth woman to compete in the sport's entire Paralympic history.
 		</p>
 
 		<p class="paragraph">
-			This isn't because there are no women playing para ice hockey. Selection is country-led and quota-based — each nation picks its squad from a small fixed allocation, and there is no dedicated women's pathway at Paralympic level. For a standalone women's event to exist, the sport needs to demonstrate representation from at least eight national teams across three regions, plus multiple World Championships. Women's para ice hockey hasn't reached those benchmarks yet. A separate tournament is likely still several Games away — possibly 2030 or 2034.
+			But why was there only one woman competing? This isn't because there are no women playing para ice hockey. Selection is country-led and quota-based: each nation picks its squad from a small fixed allocation, and there is no dedicated women's pathway at Paralympic level. For a standalone women's event to exist, the sport needs to demonstrate representation from at least eight national teams across three regions, plus multiple World Championships. Women's para ice hockey hasn't reached those benchmarks yet. A separate tournament is likely still several Games away - possibly 2030 or 2034.
 		</p>
 
 		<p class="paragraph">
-			Para snowboard tells a similar story. Men competed in six medal events at Milano Cortina. Women competed in two.
-		</p>
-
-
-		<p class="paragraph">
-			The broader numbers on aspiration make for uncomfortable reading. A 2025 report by Women in Sport and Activity Alliance surveyed young disabled people following the Paris 2024 Paralympics. The Games inspired 74% of them to do more sport — but who gets to dream of reaching the top is far from equal.
+			The broader numbers on aspiration make for uncomfortable reading. A 2025 report by Women in Sport and Activity Alliance surveyed young disabled people following the Paris 2024 Paralympics. The Games inspired 74% of them to do more sport but who gets to dream of reaching the top is far from equal.
 		</p>
 
 		<p class="paragraph">
@@ -113,7 +112,7 @@
 		</div>
 
 		<p class="paragraph">
-			Stephanie Hilborne OBE, CEO of Women in Sport, said: "This report reveals the extent to which disabled girls are being left behind in sport. While nearly two-thirds of disabled boys dream of reaching the top, only a third of disabled girls feel the same. That's not down to lack of ambition — it's the weight of gender stereotypes and the added barriers of disability, crushing opportunity and depriving young disabled women of joy. Sport has the power to transform lives, to bring self-belief and belonging. We must challenge the stereotypes and work to create more opportunities to create a future where every girl feels sport is a place she belongs."
+			Stephanie Hilborne OBE, CEO of Women in Sport, said: "This report reveals the extent to which disabled girls are being left behind in sport. While nearly two-thirds of disabled boys dream of reaching the top, only a third of disabled girls feel the same. That's not down to lack of ambition - it's the weight of gender stereotypes and the added barriers of disability, crushing opportunity and depriving young disabled women of joy. Sport has the power to transform lives, to bring self-belief and belonging. We must challenge the stereotypes and work to create more opportunities to create a future where every girl feels sport is a place she belongs."
 		</p>
 
 		<p class="paragraph">
